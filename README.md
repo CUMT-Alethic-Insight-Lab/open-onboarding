@@ -8,6 +8,10 @@ This repository is safe for public learning materials only. It must not contain 
 
 本仓只放公开学习材料，不得包含真实招新题目、面试记录、候选人评价、密钥或内部笔记。
 
+> Note for external readers: this guide assumes the lab's exam kit (Git, editor, AI tools) as the environment baseline — see [Environment Prerequisite](#environment-prerequisite--环境前提). If you are not a lab member, install Git and an editor first.
+>
+> 社外读者注意：本导论以招新机试包（Git、编辑器、AI 工具）为环境前提，见[环境前提](#environment-prerequisite--环境前提)；非社团成员请先自行安装 Git 与编辑器。
+
 ## The AI Tree | 导论树
 
 Start here: [docs/ai-tree.md](docs/ai-tree.md) — the development path from foundations to model evolution, engineering, and applications.
