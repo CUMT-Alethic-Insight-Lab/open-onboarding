@@ -31,7 +31,7 @@ Difficulty tags | 难度标注：`[入门]` 零基础可读 · `[进阶]` 需要
 - [进阶] [nanoGPT](https://github.com/karpathy/nanoGPT) — 约千行代码训练 GPT，把 Transformer 从「看懂」变「写得出」。前置：PyTorch。
 - [进阶] [Hugging Face Transformers](https://github.com/huggingface/transformers) — 预训练模型的统一入口，跑通它等于拿到整个生态的钥匙。
 
-延伸阅读 → [awesome-ai · 工程实践](https://github.com/CUMT-Alethic-Insight-Lab/awesome-ai#engineering-practice--工程实践)
+延伸阅读 → [awesome-ai · 工程实践](https://github.com/CUMT-Alethic-Insight-Lab/awesome-ai#engineering-practice)
 
 ## 2. Model Evolution | 模型演进主线
 
@@ -57,7 +57,7 @@ Difficulty tags | 难度标注：`[入门]` 零基础可读 · `[进阶]` 需要
 - [进阶] 2023 · [LoRA](https://arxiv.org/abs/2106.09685) — 低秩适配让消费级显卡也能微调大模型。
 - [深入] 2024– · [DeepSeek-R1](https://arxiv.org/abs/2501.12948) 与 [OpenAI o1](https://openai.com/index/learning-to-reason-with-llms/) — 推理时计算与强化学习驱动的新范式。前置：RL 一枝的 PPO/GRPO。
 
-延伸阅读 → [awesome-ai · LLM 基础](https://github.com/CUMT-Alethic-Insight-Lab/awesome-ai#llm-foundations--llm-基础)
+延伸阅读 → [awesome-ai · LLM 基础](https://github.com/CUMT-Alethic-Insight-Lab/awesome-ai#llm-fundamentals)
 
 ## 3. Vision & Multimodal | 视觉与多模态（CV / VLM）
 
@@ -79,7 +79,7 @@ Difficulty tags | 难度标注：`[入门]` 零基础可读 · `[进阶]` 需要
   - [进阶] 2023 · [ControlNet](https://arxiv.org/abs/2302.05543) — 给扩散模型加结构控制，可控生成的标准方案。
   - [入门] [diffusers](https://github.com/huggingface/diffusers) — Hugging Face 扩散模型标准库，几行代码跑通文生图的最佳实践入口。
 
-延伸阅读 → [awesome-ai · 多模态](https://github.com/CUMT-Alethic-Insight-Lab/awesome-ai#multimodal--多模态)
+延伸阅读 → [awesome-ai · 多模态](https://github.com/CUMT-Alethic-Insight-Lab/awesome-ai#multimodal)
 
 ## 4. Reinforcement Learning | 强化学习（RL）
 
@@ -98,7 +98,7 @@ Difficulty tags | 难度标注：`[入门]` 零基础可读 · `[进阶]` 需要
 - [进阶] [stable-baselines3](https://github.com/DLR-RM/stable-baselines3) — PyTorch 版主流 RL 算法可靠实现，实验复现利器。前置：PyTorch。
 - [深入] 2024 · [DeepSeekMath / GRPO](https://arxiv.org/abs/2402.03300) — 去掉 critic 的分组相对策略优化，R1 推理范式的训练核心。
 
-延伸阅读 → [awesome-ai · 强化学习](https://github.com/CUMT-Alethic-Insight-Lab/awesome-ai#reinforcement-learning--强化学习)
+延伸阅读 → [awesome-ai · 强化学习](https://github.com/CUMT-Alethic-Insight-Lab/awesome-ai#reinforcement-learning)
 
 ## 5. Alignment & Safety | 对齐与安全
 
@@ -115,7 +115,7 @@ Difficulty tags | 难度标注：`[入门]` 零基础可读 · `[进阶]` 需要
 - [进阶] [RLHF Book](https://rlhfbook.com/) — Nathan Lambert 的在线专著，把 RLHF 的奖励模型、优化与评测细节系统讲透。
 - [深入] [PurpleLlama / Llama Guard](https://github.com/meta-llama/PurpleLlama) — Meta 的开源安全组件，输入输出内容审核的工程化参考。
 
-延伸阅读 → [awesome-ai · 强化学习（含 RLHF 条目）](https://github.com/CUMT-Alethic-Insight-Lab/awesome-ai#reinforcement-learning--强化学习)
+延伸阅读 → [awesome-ai · 强化学习（含 RLHF 条目）](https://github.com/CUMT-Alethic-Insight-Lab/awesome-ai#reinforcement-learning)
 
 ## 6. Engineering Stack | 工程栈（Infra）
 
@@ -137,7 +137,7 @@ Difficulty tags | 难度标注：`[入门]` 零基础可读 · `[进阶]` 需要
   - [进阶] [SGLang](https://github.com/sgl-project/sglang) — RadixAttention 与结构化生成，复杂推理负载的后起之秀。
   - [深入] [TensorRT-LLM](https://github.com/NVIDIA/TensorRT-LLM) — NVIDIA 官方推理优化库，把 GPU 性能榨到极限的部署方案。
 
-延伸阅读 → [awesome-ai · AI Infra](https://github.com/CUMT-Alethic-Insight-Lab/awesome-ai#ai-infrastructure--ai-infra)
+延伸阅读 → [awesome-ai · AI Infra](https://github.com/CUMT-Alethic-Insight-Lab/awesome-ai#ai-infrastructure)
 
 ## 7. Evaluation & Benchmarks | 评测与基准
 
@@ -161,7 +161,7 @@ Difficulty tags | 难度标注：`[入门]` 零基础可读 · `[进阶]` 需要
   - [进阶] [OpenCompass](https://github.com/open-compass/opencompass) — 中文场景覆盖较全的大模型评测体系。
   - [深入] [HELM](https://github.com/stanford-crfm/helm) — Stanford 的整体性评测框架，强调透明度与多维指标。
 
-延伸阅读 → [awesome-ai · 推理与评测](https://github.com/CUMT-Alethic-Insight-Lab/awesome-ai#reasoning--evaluation--推理与评测)
+延伸阅读 → [awesome-ai · 评估与基准](https://github.com/CUMT-Alethic-Insight-Lab/awesome-ai#evaluation-benchmarks) · [awesome-ai · 推理](https://github.com/CUMT-Alethic-Insight-Lab/awesome-ai#reasoning)
 
 ## 8. Application Stack | 应用栈（Agent / Memory）
 
@@ -188,7 +188,7 @@ Difficulty tags | 难度标注：`[入门]` 零基础可读 · `[进阶]` 需要
   - [深入] 2023 · [MemGPT](https://arxiv.org/abs/2310.08560) — 把操作系统式分层内存引入 LLM，长期记忆研究的开山之作。
   - [进阶] [Mem0](https://github.com/mem0ai/mem0) — 面向 LLM 应用的开源记忆层，给 Agent 加可落地的长期记忆。前置：RAG。
 
-延伸阅读 → [awesome-ai · RAG 与检索](https://github.com/CUMT-Alethic-Insight-Lab/awesome-ai#rag--retrieval--rag-与检索) · [awesome-ai · Agent 智能体](https://github.com/CUMT-Alethic-Insight-Lab/awesome-ai#agents--agent-智能体)
+延伸阅读 → [awesome-ai · RAG 与检索](https://github.com/CUMT-Alethic-Insight-Lab/awesome-ai#rag-retrieval) · [awesome-ai · Agent 智能体](https://github.com/CUMT-Alethic-Insight-Lab/awesome-ai#agents)
 
 ## How to Read This Tree | 怎么读这棵树
 
