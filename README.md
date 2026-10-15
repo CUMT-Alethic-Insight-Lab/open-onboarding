@@ -18,6 +18,20 @@ Sibling repo [awesome-ai](https://github.com/CUMT-Alethic-Insight-Lab/awesome-ai
 
 与同 org 的 [awesome-ai](https://github.com/CUMT-Alethic-Insight-Lab/awesome-ai) 分工：awesome-ai 是平面精选清单（求全），本树是发展脉络（求序）；树末梢链接到 awesome-ai 对应分类，不重复搬运。
 
+## How to Walk the Tree | 怎么用这棵树
+
+Pick your direction, then walk from trunk to branch in this order. Each branch of the tree opens with its own numbered reading order.
+
+按你的方向选一行，从树根走到树枝；每一枝开头还有自己的编号入门顺序。
+
+| Direction | 方向 | Walk path | 行走路径 |
+| --- | --- | --- | --- |
+| LLM apps | 想做 LLM 应用 | Foundations → Model Evolution → Application Stack (RAG) → Evaluation | 地基 → 模型演进 → 应用栈 RAG 子枝 → 评测 |
+| Agents | 想做 Agent | Foundations → Model Evolution → Application Stack (Agent + Tool Use + Memory) | 地基 → 模型演进 → 应用栈 Agent/工具/Memory 子枝 |
+| Infra | 想做 Infra | Foundations (PyTorch/Transformers) → Engineering Stack → Evaluation frameworks | 地基 PyTorch 与 Transformers → 工程栈 → 评测框架 |
+| Vision / VLM | 想做视觉多模态 | Foundations (CS231n) → Model Evolution (ViT/CLIP) → Vision & Multimodal | 地基 CS231n → 演进主线 ViT/CLIP → 视觉多模态枝 |
+| Alignment / RL | 想做对齐与强化学习 | Foundations (CS285) → RL → Model Evolution (RLHF/R1) → Alignment & Safety | 地基 CS285 → RL 枝 → 演进主线 RLHF 段 → 对齐枝 |
+
 ## GitHub Conventions | GitHub 规范
 
 | Doc | 文档 | What it covers | 内容 |
