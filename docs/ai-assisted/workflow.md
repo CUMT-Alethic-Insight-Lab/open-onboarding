@@ -28,20 +28,18 @@ In review you must be able to explain any line of your PR. If you cannot, either
 
 review 时必须能讲清 PR 里的任何一行。讲不清就搞懂或删掉——「AI 写的」永远不是可接受的回答。
 
-## Session Archive | 会话存档
+## Decision Archive | 决策存档
 
-For non-trivial AI-assisted work, export the session and keep it traceable:
+Keep one habit: when context is nearly exhausted or a phase wraps up, have the AI distill the current progress, key decisions, and trial-and-error into a Markdown document, and commit it into the repository.
 
-对有分量的 AI 辅助工作，导出会话并留档：
+保持一个习惯：上下文快用完或阶段性收尾时，让 AI 把当前进展、关键决策与试错过程落成一篇 Markdown 文档，提交进仓库。
 
-| Step | 做法 |
-| --- | --- |
-| Export | Save the AI session as Markdown/zip after finishing / 完成后导出会话 |
-| Store | Put it under `docs/ai-sessions/` in the repo, or attach it to the PR / 存到仓库 `docs/ai-sessions/` 或附在 PR 里 |
-| Clean before storing | Remove any credentials, private paths, or personal data first / 存档前先清掉密钥、私人路径与个人信息 |
+From then on, a single `grep` recovers the decision chain and the trial-and-error chain — no need to archive every chat session, and no risk of credentials or private paths leaking into the repo.
+
+之后一个 `grep` 就能找回当时的决策链和试错链——无需频繁导出整段会话，也避免把密钥或私人路径带进仓库。
 
 ## Done When | 完成标志
 
 - [ ] Your PRs disclose tool, assisted parts, and cross-check / PR 里声明工具、辅助部分、验证方式
 - [ ] You only claim tests you actually ran / 只声称真实跑过的测试
-- [ ] You archived at least one AI session with a PR / 至少为一次 PR 存档了会话
+- [ ] Your progress and decisions are committed as repo documents / 进展与决策已落成仓库内的文档
