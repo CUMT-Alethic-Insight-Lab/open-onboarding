@@ -1,12 +1,27 @@
 # Open Onboarding
 
-Deeper onboarding after joining: practice the full contribution loop, start your own project, and learn the rules for responsible AI-assisted work.
+Deeper onboarding after joining: set up your environment, practice the full contribution loop, start your own project, and learn responsible AI-assisted work.
 
-加入之后的深入上手：在练习仓里跑通完整贡献闭环，用模板仓发起自己的项目，并遵守 AI 辅助工作规范。
+加入之后的深入上手教程：配置环境、在练习仓跑通完整贡献闭环、用模板仓发起自己的项目，并遵守 AI 辅助工作规范。
 
 This repository is safe for public learning materials only. It must not contain real recruitment questions, interview records, candidate evaluations, credentials, or internal notes.
 
 本仓只放公开学习材料，不得包含真实招新题目、面试记录、候选人评价、密钥或内部笔记。
+
+## Learning Path | 学习路径
+
+Follow the stages in order. Each doc ends with a checklist — you are done with a stage when every box is checked.
+
+按顺序推进。每篇文档结尾都有「完成标志」清单，全部打勾即完成该阶段。
+
+| Stage | 阶段 | Docs | Done when | 完成标志 |
+| --- | --- | --- | --- | --- |
+| 0. Setup | 环境准备 | [Git & GitHub](docs/00-setup/git-and-github.md) · [Editor & AI tools](docs/00-setup/editor-and-ai-tools.md) | You can clone a repo and push a branch | 能 clone 仓库并推送分支 |
+| 1. Git flow | 协作流程 | [Branch, commit, PR](docs/01-git-flow/branch-commit-pr.md) · [Review culture](docs/01-git-flow/review-culture.md) · [Rescue](docs/01-git-flow/rescue.md) | You know the branch-commit-PR loop and basic recovery commands | 掌握分支-提交-PR 流程与基本自救命令 |
+| 2. First contribution | 首次贡献 | [Walkthrough](docs/02-first-contribution/walkthrough.md) | Your first PR in contribution-playground is merged | 练习仓第一个 PR 已合并 |
+| 3. Project launch | 发起项目 | [From template](docs/03-project-launch/from-template.md) · [Milestones & issues](docs/03-project-launch/milestones-and-issues.md) | Your repo is created from the template with its first milestone broken into issues | 用模板建仓并把首个里程碑拆成 issue |
+| 4. AI-assisted work | AI 辅助 | [Workflow](docs/04-ai-assisted/workflow.md) | You can disclose, verify, and explain every AI-assisted contribution | 每次 AI 辅助贡献都能声明、验证、讲清 |
+| — | 常见问题 | [FAQ](faq.md) | — | — |
 
 ## The Contribution Loop | 贡献闭环
 
@@ -23,21 +38,15 @@ Practice in [contribution-playground](https://github.com/CUMT-Alethic-Insight-La
 | 5. Accept review | Read every comment, discuss or revise, push updates to the same branch | 逐条回应 review 意见，讨论或修改，推送到同一分支 |
 | 6. Merge and close | Merge after approval, close the Issue, delete the branch | 通过后合并，关闭 Issue，删除分支 |
 
-The loop is complete only when the PR is merged and the Issue is closed. One round is enough to be ready for real project work.
+The loop is complete only when the PR is merged and the Issue is closed. One round is enough to be ready for real project work. The full step-by-step version with expected output is in the [walkthrough](docs/02-first-contribution/walkthrough.md).
 
-PR 合并且 Issue 关闭才算完成一次闭环。跑通一轮即可进入正式项目。
+PR 合并且 Issue 关闭才算完成一次闭环，跑通一轮即可进入正式项目。带预期输出的逐步实操见 [walkthrough](docs/02-first-contribution/walkthrough.md)。
 
 ## Start Your Own Project | 发起自己的项目
 
-Use [project-template](https://github.com/CUMT-Alethic-Insight-Lab/project-template) as the starting point.
+Use [project-template](https://github.com/CUMT-Alethic-Insight-Lab/project-template) as the starting point, then split the first milestone into issues. Details: [From template](docs/03-project-launch/from-template.md) and [Milestones & issues](docs/03-project-launch/milestones-and-issues.md).
 
-以 [project-template](https://github.com/CUMT-Alethic-Insight-Lab/project-template) 为起点。
-
-| Step | What to do | 操作 |
-| --- | --- | --- |
-| 1. Use this template | Click **Use this template** on the project-template page, create a new repository under the organization | 在 project-template 页面点击 **Use this template**，在组织下创建新仓 |
-| 2. Rewrite the README | State the goal, scope, setup, and current status; keep it bilingual | 改写 README：写清目标、范围、运行方式与当前状态，保持双语 |
-| 3. Open suggested issues | Break the first milestone into small Issues so others can join | 把第一个里程碑拆成若干小 Issue，方便他人参与 |
+以 [project-template](https://github.com/CUMT-Alethic-Insight-Lab/project-template) 为起点建仓，再把第一个里程碑拆成 issue。详见 [用模板建仓](docs/03-project-launch/from-template.md) 与 [里程碑与 issue](docs/03-project-launch/milestones-and-issues.md)。
 
 Suggested topics | 建议题：
 
@@ -54,15 +63,9 @@ Repository-specific rules may override organization defaults, but deviations sho
 
 ## AI-Assisted Work | AI 辅助工作规范
 
-AI assistance is allowed. Blind submission is not.
+AI assistance is allowed. Blind submission is not. Operational version: [AI-assisted workflow](docs/04-ai-assisted/workflow.md).
 
-允许使用 AI 辅助，不允许不加理解的直接提交。
-
-| Rule | Detail | 说明 |
-| --- | --- | --- |
-| Disclose | State the model/tool, assisted parts, and cross-checking method | 声明所用的模型或工具、被辅助的部分、交叉验证方式 |
-| Verify | Run the tests you claim to have run | 声称跑过的测试必须真的跑过 |
-| Understand | You must be able to explain the final solution yourself | 必须能自己讲清楚最终方案 |
+允许使用 AI 辅助，不允许不加理解的直接提交。操作版见 [AI 辅助工作流](docs/04-ai-assisted/workflow.md)。
 
 Full policy: [AI Assistance Policy](https://github.com/CUMT-Alethic-Insight-Lab/governance-public/blob/main/docs/en/ai-assistance-policy.md) / [AI 辅助规则](https://github.com/CUMT-Alethic-Insight-Lab/governance-public/blob/main/docs/zh-CN/ai-assistance-policy.md)
 
