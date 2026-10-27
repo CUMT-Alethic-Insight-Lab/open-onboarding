@@ -19,9 +19,9 @@
 | --- | --- | --- | --- |
 | 1992 · [Watkins & Dayan: Q-learning](https://link.springer.com/article/10.1007/BF00992698) | 无模型序贯决策难直接学最优价值 → 离策略时序差分更新动作价值 | 表格表示与探索/稳定性限制；是价值型深度 RL 的基础之一 | RL 桥接 |
 | 1995 · [Cortes & Vapnik: Support-Vector Networks](https://link.springer.com/article/10.1007/BF00994018) | 高维小样本分类泛化难 → 最大间隔与核函数 | 大规模核计算/参数选择成本；成为统计学习代表 | ML-06 |
-| 1997 · [Freund & Schapire: AdaBoost](https://doi.org/10.1006/jcss.1997.1504) | 弱学习器精度有限 → 顺序重加权威样本并加权组合 | 对噪声/异常敏感；不同于 GBDT 的负梯度拟合 | ML-05 |
+| 1997 · [Freund & Schapire: AdaBoost](https://doi.org/10.1006/jcss.1997.1504) | 弱学习器精度有限 → 顺序重加权样本并加权组合 | 对噪声/异常敏感；不同于 GBDT 的负梯度拟合 | ML-05 |
 | 1997 · [Hochreiter & Schmidhuber: LSTM](https://doi.org/10.1162/neco.1997.9.8.1735) | 普通 RNN 长依赖梯度难传 → 门控与持续状态通路 | 顺序计算、训练成本仍在；成为序列建模重要分支 | DL-06 |
-| 1998 · [LeCun et al.: Gradient-Based Learning](http://yann.lecun.com/exdb/publis/pdf/lecun-98.pdf) | 手写视觉特征与识别割裂 → 卷积网络端到端文档识别（含 LeNet-5） | 当时数据/算力约束规模；证明局部共享视觉学习的工程价值 | DL-05 |
+| 1998 · [LeCun et al.: Gradient-Based Learning](https://doi.org/10.1109/5.726791) | 手写视觉特征与识别割裂 → 卷积网络端到端文档识别（含 LeNet-5） | 当时数据/算力约束规模；证明局部共享视觉学习的工程价值 | DL-05 |
 | 2001 · [Breiman: Random Forests](https://link.springer.com/article/10.1023/A:1010933404324) | 单树高方差且树间相关 → bootstrap 与特征随机性组合多树 | 可解释性/外推有限；至今仍是表格基线 | ML-05 |
 
 ## 2010–2016：数据与算力推动的深度表征、多类生成与深度 RL
