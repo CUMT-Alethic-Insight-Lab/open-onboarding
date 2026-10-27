@@ -54,12 +54,12 @@ open-onboarding 当前只有 README、`docs/ai-tree.md`、`docs/github/`、`docs
 
 | 用途 | 首选来源 | 上架前必须确认 | 当前状态 |
 | --- | --- | --- | --- |
-| ML 课程 | statlearning.com、INRIA sklearn MOOC、sklearn User Guide | 章节标题、Lab 对应、当前链接 | 待逐章核验 |
-| 数学/编程 | Python/NumPy 官方教程、Mathematics for Machine Learning 官方页 | 章节与公开访问方式 | 待逐章核验 |
-| DL 课程 | D2L、PyTorch Basics、micrograd、CS231n | 小节、训练循环、低资源路线 | 待逐章核验 |
-| 数据 | HF Datasets/DataTrove、DCLM、FineWeb | 许可边界、schema/去重/版本能力 | 待核验 |
-| 高效 AI | torchao、ONNX Runtime、ExecuTorch、Hinton 等蒸馏原文 | 当前 API、硬件与测量限制 | 待核验 |
-| 历史 | 原论文首版、作者/机构官方记录 | 首次公开与会议年份不混用、影响不过度归因 | 部分已核实，见上表 |
+| ML 课程 | statlearning.com、INRIA sklearn MOOC、sklearn User Guide | 章节标题、Lab 对应、当前链接 | 已按官方目录与具体 notebook 上架；可达性见第8节 |
+| 数学/编程 | Python/NumPy 官方教程、Mathematics for Machine Learning 官方页 | 章节与公开访问方式 | 已核对目录；采用第2/3/5/6/7章指定小节 |
+| DL 课程 | D2L、PyTorch Basics、micrograd、CS231n | 小节、训练循环、低资源路线 | 已按实际小节上架；Autoencoder 不再使用未确认 D2L 专章 |
+| 数据 | HF Datasets/DataTrove、DCLM、FineWeb | 许可边界、schema/去重/版本能力 | 已建原创小样本与 Parquet 实跑；生产规模未验证 |
+| 高效 AI | torchao、ONNX Runtime、ExecuTorch、Hinton 等蒸馏原文 | 当前 API、硬件与测量限制 | 已核对官方文档；生产部署未验证，教学 PTQ 已实跑 |
+| 历史 | 原论文首版、作者/机构官方记录 | 首次公开与会议年份不混用、影响不过度归因 | 38节点；arXiv 官方 API 抽检/批量核对，纠错见第4节 |
 
 ## 7. 验证证据与成熟度规则
 
@@ -67,3 +67,40 @@ open-onboarding 当前只有 README、`docs/ai-tree.md`、`docs/github/`、`docs
 - 实跑记录必须包含 Python/依赖版本、设备、命令、数据/随机种子及结果；失败、跳过、未测逐项列出。
 - 本审计不声称已经开展新成员试走。未完成至少一名新人的 ML 与 DL 小实验前，所有核心路径最高标为“内容完成，待试走”。
 - 后续 PR 按 P0 基础、P0 地图/历史、P1 数据/高效、P1-C/P2 桥接、QA 顺序累积；每阶段说明变更、兼容、验证与回滚。若审查未合并，不宣称线上已生效。
+
+## 8. 实施后的验证记录
+
+### 文档与结构
+
+2026-10-27 在完整分支执行 `python scripts/check_docs.py`：23 份 Markdown 的内链/相对路径/锚点通过；37 个核心节点（PR 6、ML 9、DL 10、DE 9、EA 3）字段齐全，节点引用存在且无强制循环；发展史 38 个节点在 25–40 范围内；README 与 Start Here 的课程入口存在。另执行 `python -m py_compile examples/*.py scripts/check_docs.py` 和 `git diff --check`，均通过。
+
+检查曾发现 README 到 DE/EA 层级过深及 Start Here 缺直接入口，已修正；检查器的 `docs/` 相对路径断言也随之修正。Torchaudio 旧教程 URL 返回确定 404，已换官方文档根页并注明维护期；LeNet 作者 PDF 网关错误后改用 DOI；Sutton & Barto 的证书链问题改用已核实的 MIT Press 官方出版页；失效的 MLHub 入口改用 Radiant Earth 的 Source Cooperative；云端检出的 Arrow 概览 404 改用 PyArrow `read_table` API 页，跳回首页的 D2L 中文旧章节改用已核实的英文官网对应小节。
+
+### 实跑环境、命令与结果
+
+环境：Windows、Python 3.14.0、NumPy 2.3.4、scikit-learn 1.7.2、PyTorch 2.13.0+cpu、pandas 2.3.3、pyarrow 25.0.0、单线程 CPU。完整命令与数值见[示例验证记录](../../examples/README.md)。实际依次执行：
+
+```bash
+python examples/ml_tree_ensemble.py
+python examples/dl_foundations.py gradient
+python examples/dl_foundations.py attention
+python examples/dl_foundations.py mlp
+python examples/dl_foundations.py cnn
+python examples/data_pipeline.py
+python examples/efficient_ai.py
+```
+
+全部通过。ML 同划分树/集成对照未触碰 holdout；梯度数值校验和 Attention/SDPA 一致；MLP loss 0.6422→0.2798、验证准确率 0.94；CNN/MLP 同预算对照完成。DE 12→6 条，Parquet 读回、组/近重复泄漏断言与版本 hash 通过。EA 的 INT8 weight-only 文件变小但本机未提速，保留反例，未改写成“量化必然加速”。这些只证明示例可运行，不证明学习目标或新人试走完成。
+
+### 外链与史实
+
+- 使用 lychee v0.24.2 做两轮全检。onboarding 首轮 337 项中 303 OK、21 errors、13 timeouts；第二轮网络较差，245 OK、68 errors、24 timeouts。awesome-ai 首轮 192 项中 175 OK、6 errors、11 timeouts；第二轮 148 OK、36 errors、8 timeouts。
+- 两仓确定的 Torchaudio 404 已修，第二轮未再出现该 404；LeNet 改用 DOI。awesome-ai 云端 CI 随后检出 MLHub 404 和 Sutton 证书链错误，分别改到 Source Cooperative 与 MIT Press。其余连接重置、超时、502/限流列为**网络未确认**，不断言死链，也不宣称全外链通过。
+- arXiv 官方 API 首轮实际核对 28 个条目标题与首次提交日期，另核对 seq2seq 和 PagedAttention；由此避免把 1207.0580（Dropout）误当 AlexNet。LoRA、GRPO、Qwen3-VL 另经原始页面核实。最后一次批量复核遇到 HTTP 429，未把该次标记为完成。
+
+### 仍未验证与回滚
+
+- 未组织新成员试走；所有核心课程最高为“内容完成，待试走”，专题为“导览级”。
+- 未在其他 OS/Python 版本、GPU、多卡、移动端或真实机器人上运行；生产 DataTrove、torchao、ONNX Runtime、ExecuTorch、大型语料/模型训练未验证。
+- PR-5 新增结构检查与 CPU 示例 CI；外链沿用 awesome-ai 的 lychee 思路，非硬拦合并，红色结果需 reviewer 结合网络证据判断。
+- 每阶段都在独立 PR 分支。回滚由 reviewer 关闭对应 PR 或在合并后 revert 该阶段提交；不直接覆盖 main。

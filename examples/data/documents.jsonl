@@ -1,0 +1,12 @@
+{"id":"a1","text":"<p>Train a small model after splitting the data into train and validation sets.</p>","source":"synthetic://guide/a","license":"CC-BY-4.0","group":"guide-a","created_at":"2026-01-01T00:00:00Z"}
+{"id":"a2","text":"Train a small model after splitting the data into train and validation sets.","source":"synthetic://guide/a-copy","license":"CC-BY-4.0","group":"guide-a","created_at":"2026-01-02T00:00:00Z"}
+{"id":"a3","text":"Train a small model after splitting the data into train and validation sets. Always keep the holdout untouched.","source":"synthetic://guide/a-near","license":"CC-BY-4.0","group":"guide-a","created_at":"2026-01-03T00:00:00Z"}
+{"id":"b1","text":"Normalize whitespace and record why each document was removed from the dataset.","source":"synthetic://guide/b","license":"CC-BY-4.0","group":"guide-b","created_at":"2026-01-04T00:00:00Z"}
+{"id":"b2","text":"  Normalize   whitespace and record why each document was removed from the dataset. ","source":"synthetic://guide/b-copy","license":"CC-BY-4.0","group":"guide-b","created_at":"2026-01-05T00:00:00Z"}
+{"id":"c1","text":"Exact hashes find identical documents while MinHash candidates can reveal similar text.","source":"synthetic://guide/c","license":"CC-BY-4.0","group":"guide-c","created_at":"2026-01-06T00:00:00Z"}
+{"id":"c2","text":"Exact hashes find identical documents while MinHash candidates reveal similar text.","source":"synthetic://guide/c-near","license":"CC-BY-4.0","group":"guide-c","created_at":"2026-01-07T00:00:00Z"}
+{"id":"d1","text":"A dataset card explains the source license intended use filtering and known limitations.","source":"synthetic://guide/d","license":"CC-BY-4.0","group":"guide-d","created_at":"2026-01-08T00:00:00Z"}
+{"id":"e1","text":"Use a group split when multiple records belong to the same source or entity.","source":"synthetic://guide/e","license":"CC-BY-4.0","group":"guide-e","created_at":"2026-01-09T00:00:00Z"}
+{"id":"f1","text":"Version the processing configuration and output so another person can reproduce it.","source":"synthetic://guide/f","license":"CC-BY-4.0","group":"guide-f","created_at":"2026-01-10T00:00:00Z"}
+{"id":"bad1","text":"","source":"synthetic://bad/empty","license":"CC-BY-4.0","group":"bad","created_at":"2026-01-11T00:00:00Z"}
+{"id":"bad2","text":"tiny","source":"synthetic://bad/tiny","license":"CC-BY-4.0","group":"bad","created_at":"2026-01-12T00:00:00Z"}

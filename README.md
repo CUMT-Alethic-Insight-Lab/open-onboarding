@@ -14,7 +14,7 @@ This repository is safe for public learning materials only. It must not contain 
 
 ## The AI Tree | 导论树
 
-**学习从这里开始：[Start Here](docs/start-here.md)**——先自检，再进入[公共先修](docs/foundations/prerequisites.md)、[经典机器学习](docs/foundations/classical-ml.md)与[神经网络基础](docs/foundations/neural-networks.md)。[CPU 示例](examples/README.md)提供最小实践。
+**学习从这里开始：[Start Here](docs/start-here.md)**——先自检，再进入[公共先修](docs/foundations/prerequisites.md)、[经典机器学习](docs/foundations/classical-ml.md)与[神经网络基础](docs/foundations/neural-networks.md)。后续可选[数据工程](docs/paths/data-engineering.md)或[小模型与高效 AI](docs/paths/efficient-ai.md)，[全部方向见路径目录](docs/paths/README.md)。[CPU 示例](examples/README.md)提供最小实践。
 
 Start here: [docs/ai-tree.md](docs/ai-tree.md) — the development path from foundations to model evolution, engineering, and applications.
 
@@ -65,9 +65,9 @@ Full policy: [AI Assistance Policy](https://github.com/CUMT-Alethic-Insight-Lab/
 
 ## Environment Prerequisite | 环境前提
 
-Anyone who has installed the lab's recruitment exam package already has the development environment (Git, editor, AI tools) — so this repo intentionally contains no setup tutorials.
+Anyone who has installed the lab's recruitment exam package already has the development environment (Git, editor, AI tools). External readers do not need that package: use [PR-00](docs/foundations/prerequisites.md#pr-00-命令行python-与可隔离环境) for the minimal environment setup and self-check.
 
-装过实验室招新机试包即已具备开发环境（Git、编辑器、AI 工具），故本仓不含环境安装教程。
+装过实验室招新机试包即已具备开发环境（Git、编辑器、AI 工具）；社外读者无需该机试包，可从 [PR-00](docs/foundations/prerequisites.md#pr-00-命令行python-与可隔离环境) 完成最小环境配置与自检。
 
 ## Related | 相关
 
