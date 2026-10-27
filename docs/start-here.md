@@ -33,6 +33,8 @@
 - [公共先修](foundations/prerequisites.md)：环境、Python/NumPy、线代、微积分、概率、数据/Git。
 - [经典 ML](foundations/classical-ml.md)：任务与数据 → 模型 → 泛化与评估 → 树/集成 → 无监督 → 可复现交付。
 - [神经网络](foundations/neural-networks.md)：MLP → 反传 → 训练闭环 → CNN/RNN/Attention → 训练范式。
+- [数据工程](paths/data-engineering.md)：来源许可 → 清洗/去重 → 无泄漏拆分 → 版本化数据集。
+- [小模型与高效 AI](paths/efficient-ai.md)：紧凑设计、压缩与同口径部署测量。
 - [学科地图](maps/field-map.md)：范式、学习信号、架构、任务四条独立分类轴。
 - [AI 发展史](history/ai-history.md)：理解技术背景，不代替先修。
 
