@@ -42,6 +42,7 @@ jobs:
       - uses: actions/checkout@v4
       - uses: lycheeverse/lychee-action@v2
         with:
-          args: --verbose --no-progress --retry-wait-time 5 --max-retries 3 './**/*.md'
+          # 403 means the publisher rejected automation, not that the page is missing; 404 still fails.
+          args: --verbose --no-progress --retry-wait-time 5 --max-retries 3 --timeout 60 --accept 200,204,206,403 './**/*.md'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
