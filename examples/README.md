@@ -20,6 +20,8 @@ python examples/dl_foundations.py gradient
 python examples/dl_foundations.py attention
 python examples/dl_foundations.py mlp
 python examples/dl_foundations.py cnn
+python examples/data_pipeline.py
+python examples/efficient_ai.py
 ```
 
 所有示例默认 seed=42；ML 输出 fit/validation/holdout 数量且不触碰 holdout，DL 训练脚本使用单独的 train/validation。修改后先记录环境、命令和输出，再解释指标；不要通过反复使用测试集选择答案。
@@ -33,3 +35,7 @@ python examples/dl_foundations.py cnn
 CNN 对照在 sklearn digits 同划分、每个模型 30 个 full-batch epoch：CNN 690 参数、验证准确率 0.8867；MLP 4810 参数、0.9422。此配置下 MLP 更高，恰好说明小数据/小预算不能从架构名字推优劣；不是“CNN 更强”或“MLP 更强”的普遍结论。
 
 首次运行 MLP 曾因训练/验证张量顺序错误失败，已修正并重新运行。脚本通过不等于教学目标完成，更不代表其他版本/操作系统已验证。
+
+数据流水线实际处理 12 条原创样本：1 条空文本、1 条过短、2 条精确重复、2 条近重复被过滤，保留 6 条；train/validation/test=4/1/1，组无重叠、无近重复跨集合，Parquet 读回验证通过，版本 hash 为 `4ca3864f…f297`。这只是教学小样本，不是生产规模压力测试。
+
+高效 AI 在同一 sklearn digits 拆分、30 个 full-batch epoch 下：baseline width64 为 0.9422 accuracy / 21469 state_dict bytes；compact width16 为 0.8333 / 7069 bytes；baseline 的透明 INT8 weight-only PTQ 为 0.9444 / 7957 bytes。该次单线程 batch-16 测量中，baseline 与 compact 均约 0.013ms，INT8 反量化前向约 0.021ms，**量化更小但并未更快**。延迟很短且测量环境有限，不能外推；RSS 采用进程采样，不等于硬件峰值。生产 torchao、ONNX Runtime、ExecuTorch、GPU/端侧路径均未实际测试。
