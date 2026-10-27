@@ -31,7 +31,7 @@ PR → ML → DL ─┬─ 数据工程 → 小型训练/LLM 数据
 - **前置**：ML-00/03、DL-03、DL-06/07、DE-01/05。
 - **目标**：把文本变成可训练序列，并解释 Tokenizer、Embedding、语言建模与数据/评测的关系。
 - **为什么在这里学**：没有 token/批次/训练闭环，直接调大框架只会隐藏错误。
-- **指定材料**：必学 D2L [文本预处理](https://zh.d2l.ai/chapter_recurrent-neural-networks/text-preprocessing.html) 与 [Transformer](https://zh.d2l.ai/chapter_attention-mechanisms-and-transformers/transformer.html)；推荐 [Hugging Face LLM Course](https://huggingface.co/learn/llm-course/) 的 Tokenizers 章节。
+- **指定材料**：必学 D2L [文本预处理](https://d2l.ai/chapter_recurrent-neural-networks/text-preprocessing.html) 与 [Transformer](https://d2l.ai/chapter_attention-mechanisms-and-transformers/transformer.html)；推荐 [Hugging Face LLM Course](https://huggingface.co/learn/llm-course/) 的 Tokenizers 章节。
 - **学习动作**：字符/子词切分对照 → vocab/特殊 token → Embedding → next-token → 按文档/时间拆分 → 训练小模型。
 - **最小实践**：在合法小文本上训练字符级 next-token 基线，报告 token 数、困惑度与样例，再考虑 nanoGPT；不需大模型。
 - **完成标准**：能解释 OOV/词表/上下文窗口、数据污染与 train/validation 边界。
@@ -57,7 +57,7 @@ PR → ML → DL ─┬─ 数据工程 → 小型训练/LLM 数据
 - **前置**：ML-01/03、DL-03、PR-05。
 - **目标**：掌握 MDP、价值、策略梯度与 PPO，再理解偏好训练。
 - **为什么在这里学**：RLHF 不是普通分类，奖励、状态和信用分配不能省略。
-- **指定材料**：必学 Sutton & Barto [第3章 MDP、第6章 TD、第13章 Policy Gradient](http://incompleteideas.net/book/the-book-2nd.html)、[Spinning Up 策略梯度](https://spinningup.openai.com/en/latest/spinningup/rl_intro3.html)；推荐 [PPO](https://arxiv.org/abs/1707.06347)。
+- **指定材料**：必学 Sutton & Barto [第3章 MDP、第6章 TD、第13章 Policy Gradient](https://mitpress.mit.edu/9780262039246/reinforcement-learning/)、[Spinning Up 策略梯度](https://spinningup.openai.com/en/latest/spinningup/rl_intro3.html)；推荐 [PPO](https://arxiv.org/abs/1707.06347)。
 - **学习动作**：MDP 五元组 → 回报/折扣 → Q 值更新 → 策略梯度 → clipping → 奖励/偏好模型 → PPO/DPO 对照。
 - **最小实践**：在 Gymnasium 小环境跑 random 与价值/策略基线，报告多种子回报分布；随后才读 InstructGPT/GRPO。
 - **完成标准**：能区分 on/off-policy、价值/策略优化、环境奖励与偏好奖励。
