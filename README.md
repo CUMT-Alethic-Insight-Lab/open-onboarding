@@ -65,9 +65,9 @@ Full policy: [AI Assistance Policy](https://github.com/CUMT-Alethic-Insight-Lab/
 
 ## Environment Prerequisite | 环境前提
 
-Anyone who has installed the lab's recruitment exam package already has the development environment (Git, editor, AI tools) — so this repo intentionally contains no setup tutorials.
+Anyone who has installed the lab's recruitment exam package already has the development environment (Git, editor, AI tools). External readers do not need that package: use [PR-00](docs/foundations/prerequisites.md#pr-00-命令行python-与可隔离环境) for the minimal environment setup and self-check.
 
-装过实验室招新机试包即已具备开发环境（Git、编辑器、AI 工具），故本仓不含环境安装教程。
+装过实验室招新机试包即已具备开发环境（Git、编辑器、AI 工具）；社外读者无需该机试包，可从 [PR-00](docs/foundations/prerequisites.md#pr-00-命令行python-与可隔离环境) 完成最小环境配置与自检。
 
 ## Related | 相关
 
