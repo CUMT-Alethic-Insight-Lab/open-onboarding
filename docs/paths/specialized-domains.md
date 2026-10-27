@@ -37,7 +37,7 @@
 - **解决的问题**：ASR 将语音转文本，TTS 将文本合成语音，通用音频还包括事件/音乐理解与生成。
 - **代表方法**：波形/频谱表征、CTC/seq2seq 识别、声学模型+声码器、音频 Transformer。
 - **先修路径**：PR-01/03 → DL-05/06/07 → 采样率、窗函数和频谱。
-- **入门资源**：[Speech and Language Processing 的公开草稿](https://web.stanford.edu/~jurafsky/slp3/) 与 [torchaudio 教程](https://docs.pytorch.org/audio/stable/tutorials.html)。
+- **入门资源**：[Speech and Language Processing 的公开草稿](https://web.stanford.edu/~jurafsky/slp3/) 与 [Torchaudio 官方文档](https://docs.pytorch.org/audio/stable/)（2.8 起为维护期，编解码转看 TorchCodec）。
 - **最小实践**：读取一段合法短音频，画出波形/频谱并比较窗长；ASR/TTS 任务任选其一，明确评价指标。
 - **补救/下一步**：先查采样率、声道与归一化；没有 GPU 时用预训小模型观察，不训练大模型。
 - **成熟度**：导览级。
@@ -77,7 +77,7 @@
 - **解决的问题**：多光谱/雷达影像、地理坐标、变化检测、地表分类与时空预测。
 - **代表方法**：CNN/ViT、时序变化检测、多模态融合、地理空间评价。
 - **先修路径**：ML-03 → DL-05/07 → 坐标/分辨率/波段与空间独立拆分。
-- **入门资源**：[TorchGeo](https://github.com/microsoft/torchgeo) 官方数据集/教程与 [Radiant MLHub](https://mlhub.earth/) 的开放数据入口。
+- **入门资源**：[TorchGeo](https://github.com/torchgeo/torchgeo) 官方数据集/教程与 [Radiant Earth · Source Cooperative](https://source.coop/radiantearth) 的开放数据入口。
 - **最小实践**：在合法小区域样本上做分类/变化检测，按地理块而非随机像素拆分并报告空间泛化。
 - **补救/下一步**：先查投影、云/缺失、波段与许可；不要复制自然图像结论而不做领域验证。
 - **成熟度**：导览级。

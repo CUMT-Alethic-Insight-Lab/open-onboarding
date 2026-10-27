@@ -22,7 +22,7 @@
 - **前置**：PR-01、DE-00。
 - **目标**：能选择 CSV/JSONL/Parquet/Arrow，并用 schema 验证记录与元数据。
 - **为什么在这里学**：格式影响类型、嵌套、列式扫描与复现，不能只看扩展名。
-- **指定材料**：必学 [HF Datasets 文档](https://huggingface.co/docs/datasets/)、[pandas IO](https://pandas.pydata.org/docs/user_guide/io.html)、[Apache Arrow/Parquet](https://arrow.apache.org/docs/python/parquet.html)。
+- **指定材料**：必学 [HF Datasets 文档](https://huggingface.co/docs/datasets/)、[pandas IO](https://pandas.pydata.org/docs/user_guide/io.html)、[PyArrow Parquet read_table](https://arrow.apache.org/docs/python/generated/pyarrow.parquet.read_table.html)。
 - **学习动作**：比较 CSV 的平面文本、JSONL 的逐行嵌套、Parquet 的列式类型；定义必填字段、类型、缺省与额外字段策略。
 - **最小实践**：运行 `python examples/data_pipeline.py`，检查 JSONL schema、Parquet 写出/读回 ID 一致和 dataset card 元数据。
 - **完成标准**：坏记录有计数与原因，不发生静默类型转换或丢字段；能说明 Arrow 作为内存表示与 Parquet 文件格式的关系。

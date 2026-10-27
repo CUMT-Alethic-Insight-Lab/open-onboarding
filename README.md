@@ -14,7 +14,7 @@ This repository is safe for public learning materials only. It must not contain 
 
 ## The AI Tree | 导论树
 
-**学习从这里开始：[Start Here](docs/start-here.md)**——先自检，再进入[公共先修](docs/foundations/prerequisites.md)、[经典机器学习](docs/foundations/classical-ml.md)与[神经网络基础](docs/foundations/neural-networks.md)。[CPU 示例](examples/README.md)提供最小实践。
+**学习从这里开始：[Start Here](docs/start-here.md)**——先自检，再进入[公共先修](docs/foundations/prerequisites.md)、[经典机器学习](docs/foundations/classical-ml.md)与[神经网络基础](docs/foundations/neural-networks.md)。后续可选[数据工程](docs/paths/data-engineering.md)或[小模型与高效 AI](docs/paths/efficient-ai.md)，[全部方向见路径目录](docs/paths/README.md)。[CPU 示例](examples/README.md)提供最小实践。
 
 Start here: [docs/ai-tree.md](docs/ai-tree.md) — the development path from foundations to model evolution, engineering, and applications.
 

@@ -47,7 +47,7 @@ Difficulty tags | 难度标注：`[入门]` 可先修后读 · `[进阶]` 需要
 
 **桥接**：ML/DL 基础 → MDP、回报/折扣与价值函数 → Q-learning → 策略梯度/PPO → DQN/Deep RL → 偏好与后训练。不要用“先读 Sutton 前几章，再直接读 GRPO”跳过中间机制。
 
-[Sutton & Barto](http://incompleteideas.net/book/the-book-2nd.html) 提供理论教材，[Spinning Up](https://spinningup.openai.com/) 提供策略梯度与实现，[Gymnasium](https://github.com/Farama-Foundation/Gymnasium) 提供环境接口；最小任务先在 CPU 小环境上比较回报与稳定性。
+[Sutton & Barto](https://mitpress.mit.edu/9780262039246/reinforcement-learning/) 提供理论教材，[Spinning Up](https://spinningup.openai.com/) 提供策略梯度与实现，[Gymnasium](https://github.com/Farama-Foundation/Gymnasium) 提供环境接口；最小任务先在 CPU 小环境上比较回报与稳定性。
 
 资源 → [awesome-ai · 强化学习](https://github.com/CUMT-Alethic-Insight-Lab/awesome-ai#reinforcement-learning)。
 
